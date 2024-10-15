@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<style>
+body
+    {
+        height : 50%;
+        background-image: url("static/image/image6.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+    }
+
+.type
+    {
+        padding : 5px;
+        border-radius : 10px;
+        background-color: #ff4000;
+    }
+.form-group
+    {
+        padding : 5px;
+        align-items: "center";
+        margin-left: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top:-15px;
+        font-family: Lucida Bright;
+
+    }
+.form-control
+    {
+        width : 300px !important;
+        height : 40px !important;
+        margin-left: 250px;
+        margin-top: 40px;
+        background-color: #5c5958;
+        border-radius : 10px;
+        color : #5c5958;
+
+    }
+label
+    {
+        display: inline-block;
+        width : 150px;
+        text-align: right;
+        margin-top : 30px;
+        padding: 5px;
+        border-radius: 10px;
+
+    }
+</style>
+</head>
+
+<body>
+    <h1 style="font-size :45px; text-align :center; font-family:'Times New Roman', Times, serif; 
+color:white;font-weight:bolder;margin-top:20px">Employee Attrition Prediction </h1>
+
+    <div style=margin-left:150px; margin-right:150px;text-align:center;>
+
+        <form action="{{ url_for('predict') }}" method="POST">        
+
+        <!--Input 1 : Age-->
+        <div class="form-group">
+            <label style ="color:white" for ="age"> Age</label>
+            <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="age">
+        </div>
+
+        <!--Input 2 : Gender-->
+        <div class="form-group">
+            <label style ="color:white" for ="gender"> Gender</label>
+            <select class="form-control" type="text" style="background-color:#5c5958;color:white;" name="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+        </select>         
+        </div>
+
+        <!--Input 3 : JobRole-->
+        <div class="form-group">
+            <label style ="color:white" for ="jobRole"> Job_Role</label>
+            <select class="form-control" type="text" style="background-color:#5c5958;color:white;" name="jobRole">
+                <option value="0">Healthcare Representative</option>
+                <option value="1">Human Resources</option>
+                <option value="2">Laboratory Technician</option>
+                <option value="3">Manager</option>
+                <option value="4">Manufacturing Director</option>
+                <option value="5">Research Director</option>
+                <option value="6">Research Scientist</option>
+                <option value="7">Sales Executive</option>
+                <option value="8">Sales Representative</option>
+            </select>
+        </div>
+
+        <!--Input 4 : JobLevel(1-5)-->
+        <div class="form-group">
+            <label style ="color:white" for ="jobLevel">Job_Level</label>        
+            <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="jobLevel">
+        </div>
+
+        <!--Input 5 : jobSatisfaction-->
+        <div class="form-group">
+            <label style ="color:white" for ="jobSatisfaction"> Job_Satisfaction</label>
+            <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="jobSatisfaction">
+        </div>
+
+        <!--Input 6 : MonthlyIncome High=0,Low=1,Medium=2 -->
+        <div class="form-group">
+            <label style ="color:white" for ="monthlyIncome">Monthly_Income</label>       
+            <select class="form-control" type="text" style="background-color:#5c5958;color:white;" name="Monthly_Income">
+                <option value="0">High</option>
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+            </select>        
+        </div>
+
+        <!--Input 7 : OverTime -> No/Yes-->
+        <div class="form-group">
+            <label style ="color:white" for ="overTime"> Over_Time</label>        
+        <select class="form-control" type="text" style="background-color:#5c5958;color:white;" name="overTime">
+            <option value="0">NO</option>
+            <option value="1">YES</option>
+        </select>
+        </div>
+
+        <!--Input 8 : BusinessTravel-->
+        <div class="form-group">
+            <label style ="color:white" for ="businessTravel"> Business_Travel</label>
+        <select class="form-control" type="text" style="background-color:#5c5958;color:white;" name="businessTravel">
+            <option value="0">Non-Travel</option>
+            <option value="1">Travel_Frequently</option>
+            <option value="2">Travel_Rarely</option>
+        </select>
+        </div>
+
+        <!--Input 9 : NumCompaniesWorked -> 0-9-->
+        <div class="form-group">
+            <label style ="color:white" for ="numCompaniesWorked"> NumCompaniesWorked</label>
+        <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="numCompaniesWorked">
+        </div>
+
+        <!--Input 10 : PercentSalaryHike	-> 11 to 25-->
+        <div class="form-group">
+            <label style ="color:white" for ="percentSalaryHike"> PercentSalaryHike</label>
+        <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="percentSalaryHike">
+        </div>
+        
+        <!--Input 11 : YearsAtCompany -> 0 to 40-->
+        <div class="form-group">
+            <label style ="color:white" for ="yearsAtCompany"> YearsAtCompany</label>
+        <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="yearsAtCompany">
+        </div>
+
+        <!--Input 12 : TotalWorkingYears -> 0 to 40-->
+        <div class="form-group">
+            <label style ="color:white" for ="totalWorkingYears"> TotalWorkingYears</label>
+        <input class="form-control" type="text" style="background-color:#5c5958;color:white;" name="totalWorkingYears">
+        </div>
+
+        <br><br>
+        <input type="submit" style="margin-left:200px; background-color: #7b38d8; width:100px; color:#ffffff";
+        font-size:15px; value="SUBMIT">
+    </form>
+
+    </div>
+
+    
+</body>
+</html>
