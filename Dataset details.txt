@@ -1,0 +1,156 @@
+1. Age -> 18 to 60
+
+2. Attrition -> yes/No
+
+3. BusinessTravel:
+Non-Travel
+Travel_Frequently
+Travel_Rarely
+
+4.DailyRate ->  102 to 1499
+
+5.Department:
+Human Resources
+Research & Development
+Sales
+
+6. DistanceFromHome -> 1 to 29
+
+7. Education -> 1 to 5
+
+8. EducationField
+Human Resources
+Life Sciences
+Marketing
+Medical
+Other
+Technical Degree
+
+9. EmployeeCount -> 1
+
+10. EmployeeNumber ->1 to 2068
+
+11. EnvironmentSatisfaction -> 1 to 4
+
+12. Gender -> Female/Male
+
+13.HourlyRate -> 30-100
+
+14. JobInvolvement -> 1 to 4
+
+15. JobLevel -> 1 to 5
+
+16.JobRole:
+Healthcare Representative
+Human Resources
+Laboratory Technician
+Manager
+Manufacturing Director
+Research Director
+Research Scientist
+Sales Executive
+Sales Representative
+
+17.JobSatisfaction -> 1to4
+
+18. MaritalStatus:
+Divorced
+Married
+Single
+
+19.MonthlyIncome -> 1009 to 19999
+	
+20.MonthlyRate	->2094 to 26999
+
+21.NumCompaniesWorked -> 0-9
+	
+22. Over18 -> Y	
+
+23. OverTime -> No/Yes
+	
+24. PercentSalaryHike	-> 11 to 25
+
+25. PerformanceRating -> 3/4
+	
+26.RelationshipSatisfaction -> 1 to 4
+	
+27. StandardHours	-> 80
+
+28.StockOptionLevel	-> 0 to 3
+
+29.TotalWorkingYears	-> 0 to 40
+
+30.TrainingTimesLastYear -> 0 to 6
+	
+31. WorkLifeBalance	-> 1 to 4
+
+32. YearsAtCompany -> 0 to 40
+	
+33. YearsInCurrentRole	-> 0 to 18
+
+34. YearsSinceLastPromotion -> 0 to 15
+	
+35. YearsWithCurrManager -> 0 to 17
+
+
+
+41,0,7,2,4,0,1,2,8,11,6,8 -> yes(1)
+49,1,6,2,2,0,0,1,1,23,10,10-> no(0)
+
+10 datas
+
+1. Age -> 18 to 60
+2. Gender -> female/Male
+3.JobRole:
+0->Healthcare Representative
+1->Human Resources
+2->Laboratory Technician
+3->Manager
+4->Manufacturing Director
+5->Research Director
+6->Research Scientist
+7->Sales Executive
+8->Sales Representative
+4.JobLevel -> 1 to 5
+5.JobSatisfaction -> 1 to4
+6.MonthlyIncome -> 1009 to 19999
+7.OverTime -> No/Yes
+8. BusinessTravel:
+0->Non-Travel
+1->Travel_Frequently
+2->Travel_Rarely
+9.NumCompaniesWorked -> 0-9
+10. PercentSalaryHike	-> 11 to 25
+11. YearsAtCompany -> 0 to 40
+12.TotalWorkingYears -> 0 to 40
+
+
+
+Output -> Attrition -> No/Yes
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
